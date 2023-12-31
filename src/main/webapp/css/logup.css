@@ -1,0 +1,285 @@
+body {
+    background-color: #abdde8;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.switch {
+    background-color: #FCFBFA;
+    width: 400px;
+    height: 140px;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    top: 73%;
+    border-radius: 8px;
+}
+
+#change+label{
+    background-color: #FFB8CE;
+    color: white;
+    width: 280px;
+    padding: 8px 0;
+    font-size: 24px;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    margin-left: -140px;
+    top: 82%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* 旋转体 */
+.turn {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    top: 8%;
+    perspective: 800px;//这里设置的值为旋转体距离屏幕这个面的距离
+    /*当定义此属性时，子元素会获得透视效果。此属性为3d元素属性*/
+    /* 旋转的时候的透视效果 */
+}
+
+.over {
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: /* all */ 1.6s ease;
+    /*所有属性（默认为all，all为有中间值的属性）  过渡时间为1.6s  过渡方式为慢快慢*/
+}
+
+#change:checked~.turn .over {
+    transform: rotateY(180deg);
+}
+
+form {
+    position: absolute;
+    background-color: #FCFBFA;
+    height: 100%;
+    border-radius: 8px;
+    transform-style: preserve-3d;
+}
+
+.sign {
+    /*页面渲染时就将注册页沿y轴旋转180度*/
+    transform: rotateY(180deg);
+}
+
+h1,
+h2 {
+    color: #1f2029;
+    user-select: none;
+    /*不允许被选中*/
+}
+
+h1 {
+    margin-top: 35px;
+}
+
+input {
+    background-color: #4E495D;
+    width: 70%;
+    height: 48px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 0 16px;
+    font-size: 18px;
+    color: #c4c3ca;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(78, 73, 79, 0.5);
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 10px);
+}
+
+.login (input:nth-child(-n+3)) {
+    margin: 20px 0;
+}
+
+.btn_static {
+    /* background-color: #981E61;
+  border: none;
+  width: 280px;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 6px 0;
+  color: white;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer; */
+    background-color: #981E61;
+    border: none;
+    width: 280px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 6px 0;
+    color: white;
+    border-radius: 8px;
+    position: fixed;
+    top: 365px;
+    left: 58px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.btn2 {}
+
+.info_text {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.info_text_title {
+    color: #0AAFE6;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.confirm_info,
+.loginName_error,
+.loginPassword_error,
+.loginPasswordConfirm_error,
+.LogupName_error,
+.LogupPassword_error {
+    color: #981E61;
+    position: absolute;
+    font-weight: 900;
+    left: 50px;
+    font-size: small;
+}
+
+.confirm_info,
+.loginPasswordConfirm_error {
+    top: 290px;
+}
+
+.loginName_error {
+    top: 145px;
+}
+
+.loginPassword_error {
+    top: 217px;
+}
+
+.LogupName_error {
+    top: 170px;
+}
+
+.LogupPassword_error {
+    top: 240px;
+}
+
+fieldset {
+    width: 500px;
+    padding: 20px;
+    margin: 30px;
+    /* border: 1px solid #ccc; */
+    border-style: none;
+}
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#addr_show02 {
+    width: 200px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    /* width: 80px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: #aaa;
+    margin: 0 20px; */
+    background-color: #981E61;
+    border: none;
+    width: 280px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 6px 0;
+    color: white;
+    border-radius: 8px;
+    /* position: fixed;
+    top: 335px;
+    left: 500px; */
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    background-color: #ccc;
+}
+
+
+#addr-choice {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+#title_wrap li,
+#addr_wrap li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+#title_wrap li {
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.titleSel {
+    border-bottom: 2px solid #981E61;
+}
+
+#addr_wrap li {
+    width: 83px;
+    height: 30px;
+    border-radius: 4px;
+    line-height: 30px;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#addr_wrap li:hover {
+    background-color: #981E61;
+    color: #FCFBFA;
+}
+
+.location_choice{
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
+    background-color: #FCFBFA;
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -10px;
+    top: 8%;
+    perspective: 800px;
+}
